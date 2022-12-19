@@ -23,5 +23,3 @@ else
         Console.WriteLine($"Не кратно, {rest}");
     }
 }
-
-
