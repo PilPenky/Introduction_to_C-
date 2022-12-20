@@ -5,15 +5,36 @@ Console.Clear();
 Console.Write("Введите трёхзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if((number > 999) || (number < 100))
+if(number > -1)
 {
-    Console.WriteLine("Необходимо ввести трёхзначное число");
+    if((number > 999) || (number < 100))
+    {
+        Console.WriteLine("Необходимо ввести трёхзначное число");
+    }
+    else
+    {
+        while(number > 99)
+        {
+            number = number / 10;
+        }
+        Console.WriteLine($"Вторая цифра числа: {number % 10}");
+    }
 }
 else
-{
-    while(number > 99)
+{   
+    Console.WriteLine("Вы ввели отрицательное число.");
+
+    if((number < -999) || (number > -100))
     {
-        number = number / 10;
+        Console.WriteLine("Необходимо ввести трёхзначное отрицательное число");
     }
-    Console.WriteLine($"Вторая цифра числа: {number % 10}");
+    else
+    {
+        while(number < -99)
+        {
+            number = number / 10;
+        }
+        int x = number % 10;
+        Console.WriteLine($"Вторая цифра числа: {x * -1}");
+    }
 }
