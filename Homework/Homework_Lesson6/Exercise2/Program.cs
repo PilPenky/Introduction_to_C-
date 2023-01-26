@@ -1,25 +1,7 @@
 ﻿/* Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5) */
 
-int NumberK1(string message)
-{
-    Console.WriteLine(message);
-    return Convert.ToInt32(Console.ReadLine());
-}
-
-int NumberK2(string message)
-{
-    Console.WriteLine(message);
-    return Convert.ToInt32(Console.ReadLine());
-}
-
-int NumberB1(string message)
-{
-    Console.WriteLine(message);
-    return Convert.ToInt32(Console.ReadLine());
-}
-
-int NumberB2(string message)
+int Number1234(string message)
 {
     Console.WriteLine(message);
     return Convert.ToInt32(Console.ReadLine());
@@ -52,10 +34,10 @@ double SearchY(double a, double b, double c, double d)
 
 //----------------------------------------------------
 
-int k1 = NumberK1("Введите значение для числа k1: ");
-int k2 = NumberK2("Введите значение для числа k2: ");
-int b1 = NumberB1("Введите значение для числа b1: ");
-int b2 = NumberB2("Введите значение для числа b2: ");
+int k1 = Number1234("Введите значение для числа k1: ");
+int k2 = Number1234("Введите значение для числа k2: ");
+int b1 = Number1234("Введите значение для числа b1: ");
+int b2 = Number1234("Введите значение для числа b2: ");
 
 double x = SearchX(k1, k2, b1, b2);
 double y = SearchY(k1, k2, b1, b2);
